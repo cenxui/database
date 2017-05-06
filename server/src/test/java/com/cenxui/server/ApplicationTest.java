@@ -1,26 +1,27 @@
 package com.cenxui.server;
 
+import com.cenxui.app.Application;
 import org.junit.Test;
 
 /**
  * Created by cenxui on 4/29/17.
  */
-public class ServerTest {
-    private Server server = new Server(100);
+public class ApplicationTest {
+    private Application application = new Application(100);
 
     @Test
     public void start() throws Exception {
-        server.start();
+        application.start();
     }
 
     @Test
     public void stop() throws Exception {
-        server.stop();
+        application.stop();
     }
 
     @Test
     public void restart() throws Exception {
-        server.restart();
+        application.restart();
     }
 
 }

@@ -1,9 +1,9 @@
-package com.cenxui.server.listener;
+package com.cenxui.app.listener;
 
 /**
  * Created by cenxui on 4/29/17.
  */
-public interface ServerConnectionEventListener {
+public interface ApplicationConnectionEventListener {
     void setup();
     void success();
     void fail();

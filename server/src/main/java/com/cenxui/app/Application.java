@@ -1,7 +1,6 @@
-package com.cenxui.server;
+package com.cenxui.app;
 
 import com.cenxui.util.Utils;
-import netscape.javascript.JSObject;
 import org.json.JSONObject;
 
 import java.util.logging.Logger;
@@ -9,12 +8,12 @@ import java.util.logging.Logger;
 /**
  * Created by cenxui on 4/29/17.
  */
-public class Server {
+public class Application {
     private final int port;
     private final String userName;
     private final String password;
 
-    public Server(int port) {
+    public Application(int port) {
         this.port = port;
         String config =  Utils.readFile("/config.json");
 
@@ -25,22 +24,22 @@ public class Server {
     }
 
     public static void main(String[] args) {
-        Server server = new Server(100);
-        server.start();
-        server.stop();
+        Application application = new Application(100);
+        application.start();
+        application.stop();
     }
 
     public void start() {
-        Logger.getLogger(Server.class.getName()).info("start");
+        Logger.getLogger(Application.class.getName()).info("start");
         Logger.getLogger(System.class.getName()).info("user : " + userName);
         Logger.getLogger(System.class.getName()).info("password : " + password);
     }
 
     public void stop() {
-        Logger.getLogger(Server.class.getName()).info("stop");
+        Logger.getLogger(Application.class.getName()).info("stop");
     }
 
     public void restart() {
-        Logger.getLogger(Server.class.getName()).info("restart");
+        Logger.getLogger(Application.class.getName()).info("restart");
     }
 }

@@ -1,4 +1,4 @@
-package com.cenxui.server.listener;
+package com.cenxui.app.listener;
 
 /**
  * Created by cenxui on 5/4/17.
